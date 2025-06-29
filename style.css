@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff3e0;
+    color: #4a2c2a;
+  }
+  
+  header {
+    text-align: center;
+    padding: 40px 20px 10px;
+    background: linear-gradient(90deg, #ffd59a, #ffef9f);
+    color: #d06000;
+  }
+  
+  .subtext {
+    font-size: 1.2em;
+    color: #b87333;
+  }
+  
+  .reasons {
+    background-color: #fff8e1;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 221, 100, 0.4);
+  }
+  
+  .reasons h2 {
+    text-align: center;
+    color: #f4a261;
+  }
+  
+  .reasons ul {
+    list-style-type: "✨ ";
+    padding-left: 20px;
+    font-size: 1.1em;
+  }
+  
+  .reasons li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .gallery {
+    padding: 20px;
+    background: linear-gradient(135deg, #fff3e0, #ffffcc);
+  }
+  
+  .gallery h2 {
+    text-align: center;
+    color: #e07a5f;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .grid img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 181, 80, 0.4);
+  }
+  
+  .audio-message {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffe5b4;
+  }
+  
+  .audio-message h2 {
+    color: #ff9a00;
+  }
+  
+  .audio-message p {
+    color: #a0522d;
+    font-style: italic;
+  }
+  
+  .audio-message audio {
+    width: 300px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: #ffe0b2;
+    box-shadow: 0 4px 10px rgba(255, 170, 100, 0.4);
+  }
+  
+  /* ✨ Sparkle Overlay */
+  .sparkle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle, rgba(255, 223, 0, 0.6) 1.5px, transparent 1.5px),
+      radial-gradient(circle, rgba(255, 182, 193, 0.6) 1.5px, transparent 1.5px),
+      radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+      radial-gradient(circle, rgba(255, 255, 150, 0.5) 1.2px, transparent 1.2px);
+    background-size: 20px 20px;
+    z-index: -1;
+    opacity: 1;
+    animation: sparkleMove 30s linear infinite;
+  }
+  
+  @keyframes sparkleMove {
+    0% {
+      background-position: 0 0, 10px 10px, 20px 20px, 30px 30px;
+    }
+    100% {
+      background-position: 1000px 1000px, 1010px 1010px, 1020px 1020px, 1030px 1030px;
+    }
+  }  

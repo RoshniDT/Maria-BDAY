@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday MG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Rainbow Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script>
+    setInterval(() => {
+      confetti({
+        particleCount: 200,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#8B00FF']
+      });
+    }, 2000);
+  </script>
+
+  <!-- Sparkle Overlay -->
+  <div class="sparkle-background"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>🌟 Happy Birthday MG 🌟</h1>
+    <p class="subtext">Peachy queen. Sunshine soul. Forever iconic.</p>
+  </header>
+
+  <!-- Reasons You're Iconic -->
+  <section class="reasons">
+    <h2>Reasons You're Iconic</h2>
+    <ul>
+      <li>You are the gentlest heart I’ve ever known</li>
+      <li>You showed up in my life when I was perhaps at a low point I didn’t realise how much I needed someone like you but there you were MEOW</li>
+      <li>You’re endlessly kind so so caring the kind of person who makes people feel safe just by being around</li>
+      <li>You’ve helped me in more ways than you even know your presence alone has been healing and grounding</li>
+      <li>I’m so thankful for all your help with my girl problems and many more to come your kindness that you have given me is immensely greatly appreciated</li>
+      <li>Since becoming friends with you and Alex so much changed and I'm not gonna lie ever since meeting you guys I've never been this happy in life we became this little family you Alex Ki and I and I love our family more than I can say</li>
+      <li>You light up the room wherever you go you glow you’re the most amazing ball of sunshine I’ve ever known</li>
+      <li>You are beautiful ridiculously so inside and out HEHEHEHEHEHE</li>
+      <li>Everyone loves you and honestly how could they not you’re pure gold</li>
+      <li>You make life feel full the fullest it’s ever been since I met you life has been good so good so amazing so perfect</li>
+      <li>And I’m just really really lucky to know you and have a lovely friend like you</li>
+    </ul>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="gallery">
+    <h2>Memory Zone 📸</h2>
+    <div class="grid" id="photoGrid">
+      <!-- Images will be injected here by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Audio Message -->
+  <section class="audio-message">
+    <h2>🔊 Press Play</h2>
+    <audio id="audioMessage" controls>
+      <source src="audio/maria-message.m4a" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <p>💛 From me, to you. With all the love in the world.</p>
+  </section>
+
+  <!-- JS: Randomise gallery order -->
+  <script>
+    const imageFilenames = [
+      "Maria 1.jpg", "Maria 2.jpg", "Maria 3.jpg", "Maria 4.jpg",
+      "Maria 5.jpg", "Maria 6.jpg", "Maria 7.jpg", "Maria 8.jpg", "Maria 9.jpg",
+      "Maria 10.jpg", "Maria 11.jpg", "Maria 12.jpg", "Maria 13.jpg", "Maria 14.jpg",
+      "MariaKi.jpg", "MariaRosh 1.jpg", "MariaRosh 2.jpg", "MariaRosh 3.jpg", "MariaRosh 4.jpg",
+      "Family 1.jpg", "Family 2.jpg", "bambi 1.jpg", "bambi 2.jpg", "bambi 3.jpg", "bambi 4.jpg", "bambi 5.jpg"
+    ];
+
+    const shuffled = imageFilenames.sort(() => 0.5 - Math.random());
+    const grid = document.getElementById("photoGrid");
+
+    shuffled.forEach(name => {
+      const img = document.createElement("img");
+      img.src = `images/${name}`;
+      img.alt = name;
+      img.classList.add("hover-photo");
+      grid.appendChild(img);
+    });
+  </script>
+
+</body>
+</html>
